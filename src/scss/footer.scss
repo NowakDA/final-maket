@@ -1,0 +1,27 @@
+.footer {
+  font-size: 14px;
+  padding: 16px;
+  text-align: center;
+  color: #7e7e82;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  border-top: $border solid 1px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+      flex-direction: row;
+      padding-top: 32px;
+      padding-bottom: 21px;
+      div {
+        flex: 33.3%;
+      }
+    }
+  }
+
+  @media (min-width: 1120px) {
+    .footer {
+        padding-left: 32px;
+    }
+}

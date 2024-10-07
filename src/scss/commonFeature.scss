@@ -1,0 +1,31 @@
+
+
+body {
+  font-size: 100%;
+  font-family: "TT Lakes", sans-serif;
+  background-color: $bgColor;
+  color: $text-dark;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+
+.modal::backdrop {
+  background-color: $white;
+  opacity: 0.9;
+}
+
+@media (min-width: 1440px) {
+  body {
+      width: 1440px;
+      margin: 0 auto;
+  }
+}
+
+@media (min-width: 1120px){
+  .root {
+    margin-left: 320px;
+  }
+}

@@ -1,0 +1,133 @@
+.brands {
+  &__title {
+    box-sizing: border-box;
+    background: $gradient;
+    min-height: 56px;
+    max-height: 80px;
+    padding: 16px 16px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-light;
+    border-top: 1px solid $border;
+  }
+
+}
+
+.brands-list{
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+    padding: 16px;
+    border: 1px solid $btn-border;
+    border-radius: 5px;
+    background-color: $white;
+  }
+  &__go{
+    background-image: url(../img/go.svg);
+    width: 40px;
+    height: 40px;
+  }
+}
+.brands-list__btn{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  height: 72px;
+
+}
+
+.btn-more {
+  visibility: hidden;
+}
+
+.swiper-wrapper {
+  padding-left: 16px;
+  padding-top: 16px;
+}
+
+.swiper-pagination {
+  position: relative;
+  padding-top: 24px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  background-color: #dddddd;
+}
+
+.swiper-pagination-bullet-active {
+  --swiper-theme-color: #b5b6bc;
+}
+
+@media (min-width: 768px) {
+  .brands{
+    &__title {
+      padding-left: 24px;
+    }
+  }
+  .brands-list {
+    box-sizing: border-box;
+    padding: 24px !important;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 24px;
+    grid-auto-flow: dense;
+
+    &__item {
+      max-width: 224px;
+    }
+
+    &__item--hidden {
+      display: none;
+    }
+  }
+
+  .btn-more {
+    visibility: inherit;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b1c21;
+    span {
+      padding-left: 4px;
+    }
+    &:before {
+      content: url(../img/expand.svg);
+      box-sizing: border-box;
+      height: 24px;
+    }
+  }
+
+  .btn-more--rotate::before {
+    transform: rotate(180deg);
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brands-list {
+    grid-template-columns: repeat(4, 1fr);
+    &__item {
+      max-width: 240px;
+    }
+  }
+
+  .desktop {
+    display: flex !important;
+  }
+}

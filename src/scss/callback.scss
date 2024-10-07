@@ -1,0 +1,139 @@
+.callback {
+  background-color: #ffffff;
+  padding: 24px 16px;
+  border: 1px solid #d9fff5;
+  border-radius: 1px;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(100%);
+  margin-left: auto;
+  min-height: 100lvh;
+
+
+  &__close-btn {
+    margin-right: auto;
+    margin-bottom: 40px;
+
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin-bottom: 24px;
+
+    &::before {
+      content: '';
+      background-color: #41f6d7;
+      border-radius: 0 10px 10px 0;
+      width: 4px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      display: inline-block;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    &-phone {
+      color: #b5b6bc;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      border-radius: 8px;
+      border: 1px solid #eaeaea;
+      padding: 12px 16px;
+
+      &:focus {
+        border: 2px solid #ff3e79;
+      }
+    }
+  }
+
+  &__agreement {
+    color: #7e7e82;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 19px;
+
+    a {
+      color: #ff3e79;
+    }
+  }
+
+  &__send-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 136px;
+    height: 32px;
+    background: #ff3e79;
+    border-radius: 16px;
+    margin-left: auto;
+
+    &:hover {
+      transform: scale(0.95);
+      transition: transform 0.2s ease-in-out;
+      opacity: 0.5;
+    }
+
+    &-text {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: -0.15px;
+      text-transform: uppercase;
+
+      &::after {
+        content: url(../img/dropdown.svg);
+        height: 24px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+}
+
+.callback[open]{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+@media (min-width: 320px) {
+  .callback {
+    min-width: 320px;
+    max-width: 360px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1120px) {
+  .callback {
+    overflow: visible;
+    max-width: 440px;
+    padding: 45px 32px;
+    &__close-btn {
+      position: absolute;
+      left: -65px;
+      top: 40px;
+
+    }
+  }
+
+}
+
+
+
+
+
+
