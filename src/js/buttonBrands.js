@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const hidden = brend_list.querySelectorAll('#hidden');
 
   button.addEventListener('click', function () {
-    hidden.forEach((element) => {
-      element.classList.toggle('brands-list__item--hidden');
-    });
-    //const section = document.getElementsByClassName('brands swiper');
+    //hidden.forEach((element) => {
+    //  element.classList.toggle('brands-list__item--hidden');
+    //});
+    const section = document.getElementsByClassName('brands swiper');
     //section.style.height = 100;
-    //section.style.height = 'fit-content';
+    section.style.height = 'fit-content';
     button.classList.toggle('btn-more--rotate');
     button_text.innerHTML =
       button_text.innerHTML === 'Скрыть'
