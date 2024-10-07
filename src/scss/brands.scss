@@ -4,7 +4,8 @@
     background: $gradient;
     min-height: 56px;
     max-height: 80px;
-    padding: 16px 16px;
+    padding: 16px 16px;    
+    overflow-y: hidden;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 24px;
@@ -41,6 +42,11 @@
   width: 240px;
   height: 72px;
 
+}
+
+#hiding_list{
+  height: 222px;
+  overflow-y: hidden;
 }
 
 .btn-more {
