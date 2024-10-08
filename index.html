@@ -149,10 +149,10 @@
         </div>
         <nav class="page__nav">
           <ul class="slide-menu">
-            <li class="slide-menu__button"><a href="#">Ремонтируемые бренды</a></li>
-            <li class="slide-menu__button"><a href="#">Ремонтируемые устройства</a></li>
+            <li class="slide-menu__button"><a href="#brands">Ремонтируемые бренды</a></li>
+            <li class="slide-menu__button"><a href="#services">Ремонтируемые устройства</a></li>
             <li class="slide-menu__button"><a href="#">Дополнительные услуги</a></li>
-            <li class="slide-menu__button"><a href="#">Цены на услуги</a></li>
+            <li class="slide-menu__button"><a href="#price">Цены на услуги</a></li>
             <li class="slide-menu__button"><a href="#">Адреса сервисных центров</a></li>
             <li class="slide-menu__button"><a href="#">Специальные цены</a></li>
             <li class="slide-menu__button slide-menu__button--desktop"><a href="#">Отзывы</a></li>
@@ -165,24 +165,25 @@
                 техники Dell. Только у нас вы можете отремонтировать
                 свой ноутбук Dell с официальной гарантией производителя.
               </p>
-              <p class="page__descr page__descr--tablet">Мы успешно работаем с 1992 года и заслужили
+              <p class="page__descr page__descr--tablet hide">Мы успешно работаем с 1992 года и заслужили
                 репутацию надежного партнера
-                <span class="page__descr page__descr--desktop">, что подтверждает большое количество постоянных
+                <span class="page__descr page__descr--desktop hide">, что подтверждает большое количество постоянных
                   клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
                   советуют нас родным и близким.
                 </span>
               </p>
+              <p class="page__descr page__descr--more hide">Наша команда состоит из высококвалифицированных специалистов,
+                 которые проходят регулярное обучение для работы с новейшими моделями техники. </p>
             </div>
-            <button class="btn-read-more">
-              <img src="img/expand.svg" alt="">Читать далее
-            </button>
+            <button class="btn-read-more"><span>Читать далее</span></button>
           </div>
           <div class="page__img">
             <img src="img/Picture Copy.png" alt="Фото с лого" width="100%">
           </div>
         </div>
       </section>
-      <section class="brands swiper">
+    
+      <section id="brands" class="brands swiper">
         <h2 class="brands__title">Ремонт техники различных брендов</h2>
         <ul class="brands-list swiper-wrapper">
           <li class="brands-list__item swiper-slide">
@@ -200,7 +201,7 @@
               <span class="brands-list__go"></span>
             </button>
           </li>
-          <li id="hidden" class="brands-list__item swiper-slide brands-list__item--hidden desktop">
+          <li class="brands-list__item swiper-slide desktop">
             <button class="brands-list__btn"><img src="img/sonic.png" alt="sonic">
               <span class="brands-list__go"></span>
             </button>
@@ -220,22 +221,22 @@
               <span class="brands-list__go"></span>
             </button>
           </li>
-          <li id="hidden" class="brands-list__item swiper-slide brands-list__item--hidden desktop">
+          <li class="brands-list__item swiper-slide desktop">
             <button class="brands-list__btn"><img src="img/sony.png" alt="sony">
               <span class="brands-list__go"></span>
             </button>
           </li>
-          <li id="hidden" class="brands-list__item swiper-slide brands-list__item--hidden">
+          <li class="brands-list__item swiper-slide">
             <button class="brands-list__btn"><img src="img/lenovo.png" alt="lenovo">
               <span class="brands-list__go"></span>
             </button>
           </li>
-          <li id="hidden" class="brands-list__item swiper-slide brands-list__item--hidden">
+          <li class="brands-list__item swiper-slide">
             <button class="brands-list__btn"><img src="img/samsung.png" alt="samsung">
               <span class="brands-list__go"></span>
             </button>
           </li>
-          <li id="hidden" class="brands-list__item swiper-slide brands-list__item--hidden">
+          <li class="brands-list__item swiper-slide">
             <button class="brands-list__btn"><img src="img/apple.png" alt="apple">
               <div class="brands-list__go"></div>
             </button>
@@ -244,11 +245,12 @@
         <div id="swiper-pagination" class="swiper-pagination"></div>
         <button class="btn-more"><span>Показать все</span></button>
       </section>
+    
 
 
-      <section class="services">
+      <section id="services" class="services">
         <h2 class="services__title">Ремонт различных видов техники</h2>
-        <div class="services__wrapper">
+       
           <div class="swiper">
             <ul class="services__items swiper-wrapper">
               <li class="services__item swiper-slide">
@@ -283,28 +285,28 @@
                   <span class="services-button__descr">Ремонт телефонов</span>
                   <span class="services-button__go"></span></button>
               </li>
-              <li id="hidden_services" class="services__item swiper-slide hidden">
+              <li class="services__item swiper-slide">
 
                 <button class="services-button">
                   <span class="services-button__descr">Ремонт умных часов</span>
                   <span class="services-button__go"></span>
                 </button>
               </li>
-              <li id="hidden_services" class="services__item swiper-slide hidden">
+              <li class="services__item swiper-slide">
 
                 <button class="services-button">
                   <span class="services-button__descr">Ремонт телевизоров</span>
                   <span class="services-button__go"></span>
                 </button>
               </li>
-              <li id="hidden_services" class="services__item swiper-slide hidden">
+              <li class="services__item swiper-slide">
 
                 <button class="services-button">
                   <span class="services-button__descr">Ремонт техники для дома</span>
                   <span class="services-button__go"></span>
                 </button>
               </li>
-              <li id="hidden_services" class="services__item swiper-slide hidden">
+              <li class="services__item swiper-slide">
 
                 <button class="services-button">
                   <span class="services-button__descr">Ремонт оргтехники</span>
@@ -314,10 +316,11 @@
             </ul>
             <div id="swiper-pagination" class="swiper-pagination"></div>
           </div>
-          <button class="btn-more"><span>Показать все</span></button>
-        </div>
+          <button class="btn-more services-btn"><span>Показать все</span></button>
+       
       </section>
-      <section class="price">
+
+      <section id="price" class="price">
         <h2 class="price__title">Цены на услуги</h2>
         <ul class="price__captions list-reset">
           <li class="price__caption">Ремонтные услуги</li>
