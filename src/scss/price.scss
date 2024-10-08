@@ -26,9 +26,13 @@
     color: $white;
     background-color: $pink;
     border-radius: 30px;
-    &:after{
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:after {
       content: url(../img/dropdown.svg);
-      padding-left: 8px
+      padding-left: 8px;
     }
   }
 
@@ -36,26 +40,33 @@
     font-size: 14px;
   }
 
-  &__button-offer span {
-    display: flex;
-    text-align: start;
-    align-items: center;
-    font-weight: 500;
-    padding-bottom: 40px;
-    &:after {
-      content: url(../img/more.svg);
-      height: 24px;
+  &__button-offer {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    span {
+      display: flex;
+      text-align: start;
+      align-items: center;
+      font-weight: 500;
+      padding-bottom: 40px;
+      &:after {
+        content: url(../img/more.svg);
+        height: 24px;
+      }
     }
   }
-
-  &__items{
+  &__items {
     padding: 16px;
   }
 
-  &__info{
+  &__info {
     padding: 16px;
   }
 }
+
+
 
 @media (max-width: 767px) {
   .price__item {

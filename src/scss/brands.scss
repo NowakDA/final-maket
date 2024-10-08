@@ -28,6 +28,9 @@
     border: 1px solid $btn-border;
     border-radius: 5px;
     background-color: $white;
+    transition: box-shadow 0.3s ease;
+    &:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);}
   }
   &__go {
     background-image: url(../img/go.svg);
@@ -35,6 +38,7 @@
     height: 40px;
     transition: all 0.3s ease;
     transform: translateX(0);
+    
   }
 
   &__btn {
