@@ -3,7 +3,7 @@ import './buttonBurger'
 import './swiper'
 import './buttonBrands'
 import './buttonServices'
-//import './buttonPageMore'
+import './buttonPageMore'
 import './modalCallBack'
 import './modalFeedBack'
 

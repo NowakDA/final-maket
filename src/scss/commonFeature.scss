@@ -17,6 +17,38 @@ body:has(dialog[open]) {
   opacity: 0.9;
 }
 
+.btn-more {
+  visibility: hidden;
+}
+
+@media (min-width: 768px){
+  .btn-more {
+    visibility: inherit;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b1c21;
+    span {
+      padding-left: 4px;
+    }
+    &:before {
+      content: url(../img/expand.svg);
+      box-sizing: border-box;
+      height: 24px;
+    }
+  }
+
+  .btn-more--rotate::before {
+    transform: rotate(180deg);
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
 @media (min-width: 1440px) {
   body {
       width: 1440px;

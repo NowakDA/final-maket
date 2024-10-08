@@ -40,6 +40,14 @@
     height: 50%;
     text-align: center;
   }
+
+  &__descr--more{
+    display: none;
+  }
+}
+
+.visible{
+  display: initial !important;
 }
 
 .slide-menu {
@@ -83,6 +91,16 @@
   line-height: 24px;
   letter-spacing: -0.2px;
   vertical-align: middle;
+
+  &:before {
+    content: url(../img/expand.svg);
+    box-sizing: border-box;
+    height: 24px;
+  }
+}
+
+.btn-read-more--rotate::before {
+  transform: rotate(180deg);
 }
 
 .page-btn--desktop,
@@ -115,6 +133,10 @@
       margin-bottom: 15px;
       letter-spacing: 0.20000000298023224px;
       text-align: left;
+    }
+
+    &__text{
+      padding: 0 24px;
     }
   }
 

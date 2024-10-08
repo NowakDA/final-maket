@@ -15,6 +15,8 @@
 }
 
 .brands-list {
+  padding-left: 16px;
+  padding-top: 16px;
   &__item {
     box-sizing: border-box;
     display: flex;
@@ -31,6 +33,8 @@
     background-image: url(../img/go.svg);
     width: 40px;
     height: 40px;
+    transition: all 0.3s ease;
+    transform: translateX(0);
   }
 
   &__btn {
@@ -43,14 +47,10 @@
   }
 }
 
-.btn-more {
-  visibility: hidden;
+.brands-list__btn:hover .brands-list__go {
+  transform: translateX(5px);
 }
 
-.swiper-wrapper {
-  padding-left: 16px;
-  padding-top: 16px;
-}
 
 .swiper-pagination {
   position: relative;
@@ -95,32 +95,7 @@
       overflow: visible;
   }
   
-
-  .btn-more {
-    visibility: inherit;
-    padding-left: 24px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    color: #1b1c21;
-    span {
-      padding-left: 4px;
-    }
-    &:before {
-      content: url(../img/expand.svg);
-      box-sizing: border-box;
-      height: 24px;
-    }
-  }
-
-  .btn-more--rotate::before {
-    transform: rotate(180deg);
-  }
-
-  .swiper-pagination {
-    display: none;
-  }
+  
 }
 
 @media (min-width: 1400px) {
