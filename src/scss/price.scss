@@ -56,8 +56,8 @@
     height: 200px;
     font-size: 14px;
     border-radius: 6px;
-    border: 1px solid #eaeaea;
-    background: #ffffff;
+    border: 1px solid $btn-border;
+    background: $white;
     padding: 16px;
     box-sizing: border-box;
   }
@@ -85,11 +85,11 @@
       padding: 16px;
       display: grid;
       grid-template-columns: 50% 15% 15%;
-      color: #7e7e82;
+      color: $text-light;
       padding-bottom: 16px;
     }
     &__items {
-      background-color: #ffffff;
+      background-color: $white;
       border-radius: 10px;
       display: inherit;
       padding-bottom: 0px;
@@ -99,7 +99,7 @@
       grid-template-columns: 50% 15% 15% 20%;
       padding: 23px 16px;
       align-items: center;
-      box-shadow: 0 17px 0 -16px #eaeaea;
+      box-shadow: 0 17px 0 -16px $btn-border;
       box-sizing: border-box;
     }
     &__description {

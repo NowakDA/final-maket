@@ -1,25 +1,31 @@
-.services{
+.services {
   padding-left: 16px;
   &__title {
     padding-top: 16px;
     padding-bottom: 16px;
-		text-transform: uppercase;
-		font-size: 16px;
+    text-transform: uppercase;
+    font-size: 16px;
     font-weight: lighter;
-		line-height: 24px;
-		color: $text-light;
+    line-height: 24px;
+    color: $text-light;
     border-top: $border solid 1px;
+    background: $gradient;
+    max-height: 80px;
   }
   &__item {
     box-sizing: border-box;
     width: 240px;
     height: 160px;
     padding: 16px;
-    border: 1px solid #EAEAEA;
+    border: 1px solid $btn-border;
     border-radius: 5px;
   }
+  &__wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
   }
-.services-button{
+}
+.services-button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,40 +42,25 @@
   }
 }
 
-.services__title {
-  max-height: 80px;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: lighter;
-  line-height: 24px;
-  color: #7e7e82;
-  border-top: #D9FFF5 solid 1px;
-  background: linear-gradient(to right, #F8F8F8, #FFFFFF);
-}
-
-
-.services__wrapper {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-
-
-
 @media (min-width: 768px) {
-
-
   .services__wrapper {
     padding: 24px;
   }
 
   .services__items {
-    width: -moz-fit-content;
+    height: 150px;
+    overflow: hidden;
     width: fit-content;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px 24px;
     grid-auto-flow: dense;
+  }
+
+  .services__items.open{
+    height: fit-content;
+    
+
   }
 
   .services__item {
@@ -86,16 +77,6 @@
   }
 }
 
-@media (min-width: 1120px) {
-  .services__items {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-
-  .services__wrapper {
-    padding: 24px 32px;
-  }
-}
 
 @media (min-width: 1400px) {
   .services__items {

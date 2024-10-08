@@ -4,7 +4,7 @@
     background: $gradient;
     min-height: 56px;
     max-height: 80px;
-    padding: 16px 16px;    
+    padding: 16px 16px;
     overflow-y: hidden;
     text-transform: uppercase;
     font-size: 16px;
@@ -12,10 +12,9 @@
     color: $text-light;
     border-top: 1px solid $border;
   }
-
 }
 
-.brands-list{
+.brands-list {
   &__item {
     box-sizing: border-box;
     display: flex;
@@ -28,25 +27,20 @@
     border-radius: 5px;
     background-color: $white;
   }
-  &__go{
+  &__go {
     background-image: url(../img/go.svg);
     width: 40px;
     height: 40px;
   }
-}
-.brands-list__btn{
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 240px;
-  height: 72px;
 
-}
-
-#hiding_list{
-  height: 222px;
-  overflow-y: hidden;
+  &__btn {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+  }
 }
 
 .btn-more {
@@ -75,12 +69,14 @@
 }
 
 @media (min-width: 768px) {
-  .brands{
+  .brands {
     &__title {
       padding-left: 24px;
     }
   }
   .brands-list {
+    max-height: 200px;
+    overflow: hidden;
     box-sizing: border-box;
     padding: 24px !important;
     width: fit-content;
@@ -92,11 +88,13 @@
     &__item {
       max-width: 224px;
     }
-
-    &__item--hidden {
-      display: none;
     }
+
+    .brands-list.open{
+      max-height: fit-content;
+      overflow: visible;
   }
+  
 
   .btn-more {
     visibility: inherit;
@@ -125,7 +123,7 @@
   }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1400px) {
   .brands-list {
     grid-template-columns: repeat(4, 1fr);
     &__item {

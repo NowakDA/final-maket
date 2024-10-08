@@ -3,7 +3,7 @@
 	min-width: 320px;
 	display: flex;
 	background-color: $white;
-	box-shadow: inset 0 -3px 0 -1px #d9fff5;
+	box-shadow: inset 0 -3px 0 -1px $border;
 	&__left-menu {
 		width: 55%;
 		padding-left: 16px;

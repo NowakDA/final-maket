@@ -1,22 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const button = document.querySelector('.btn-more');
-  const brend_list = document.querySelector('.brands-list');
-  const button_text = button.querySelector('span');
-  //const hidden = brend_list.querySelectorAll('#hidden');
+let button = document.querySelector(".btn-more");
+let brend_list = document.querySelector(".brands-list");
+let button_text = document.querySelector(".btn-more > span");
 
-  button.addEventListener('click', function () {
-    //hidden.forEach((element) => {
-    //  element.classList.toggle('brands-list__item--hidden');
-    //});
-    const section = document.getElementById('hiding_list');
-    button.classList.toggle('btn-more--rotate');
-    let isOpened = button_text.innerHTML === 'Скрыть';
-    section.style.height = isOpened
-    ? '222px'
-    : 'fit-content';
-
-    button_text.innerHTML = isOpened
-        ? 'Показать все'
-        : 'Скрыть';    
-  });
+button.addEventListener("click", function () {
+  brend_list.classList.toggle("open")
+  button.classList.toggle("btn-more--rotate");
+  button_text.innerHTML =
+    button_text.innerHTML === "Скрыть"
+      ? (button_text.innerHTML = "Показать все")
+      : (button_text.innerHTML = "Скрыть");
 });
