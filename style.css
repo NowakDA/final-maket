@@ -666,7 +666,10 @@ body:has(dialog[open]) {
     padding: 16px;
     border: 1px solid #EAEAEA;
     border-radius: 5px;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease; }
+    .brands-list__item:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
   .brands-list__go {
     background-image: url(./static/go.svg);
     width: 40px;
@@ -748,7 +751,10 @@ body:has(dialog[open]) {
   height: 160px;
   padding: 16px;
   border: 1px solid #EAEAEA;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease; }
+  .services__item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
 
 .services-button {
   display: flex;
@@ -822,7 +828,10 @@ body:has(dialog[open]) {
   letter-spacing: -0.15px;
   color: #ffffff;
   background-color: #FF3E79;
-  border-radius: 30px; }
+  border-radius: 30px;
+  transition: transform 0.3s ease; }
+  .price__button:hover {
+    transform: scale(1.1); }
   .price__button:after {
     content: url(./static/dropdown.svg);
     padding-left: 8px; }
@@ -830,15 +839,19 @@ body:has(dialog[open]) {
 .price__description {
   font-size: 14px; }
 
-.price__button-offer span {
-  display: flex;
-  text-align: start;
-  align-items: center;
-  font-weight: 500;
-  padding-bottom: 40px; }
-  .price__button-offer span:after {
-    content: url(./static/more.svg);
-    height: 24px; }
+.price__button-offer {
+  transition: transform 0.3s ease; }
+  .price__button-offer:hover {
+    transform: scale(1.1); }
+  .price__button-offer span {
+    display: flex;
+    text-align: start;
+    align-items: center;
+    font-weight: 500;
+    padding-bottom: 40px; }
+    .price__button-offer span:after {
+      content: url(./static/more.svg);
+      height: 24px; }
 
 .price__items {
   padding: 16px; }
