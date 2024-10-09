@@ -128,6 +128,8 @@ body:has(dialog[open]) {
     font-size: 16px;
     font-weight: 500;
     padding: 16px 0; }
+    .burger-navigation__item:hover {
+      color: #7e7e82; }
   .burger-navigation .active {
     color: #7e7e82;
     display: flex;
@@ -169,8 +171,10 @@ body:has(dialog[open]) {
   flex-direction: row; }
   .lang-list__item {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     padding-right: 7px; }
+    .lang-list__item:hover {
+      color: #7e7e82; }
   .lang-list .active {
     color: #7e7e82; }
 
@@ -547,6 +551,8 @@ body:has(dialog[open]) {
       border: #b8ffec 2px solid;
       border-radius: 6px;
       background-color: #ffffff; }
+    .slide-menu__button:hover {
+      opacity: 50%; }
 
 .btn-read-more {
   display: flex;
@@ -638,7 +644,9 @@ body:has(dialog[open]) {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    font-weight: 500; } }
+    font-weight: 500; }
+  .btn-read-more {
+    padding: 0 32px; } }
 
 .brands__title {
   box-sizing: border-box;
@@ -721,13 +729,20 @@ body:has(dialog[open]) {
     max-height: -webkit-fit-content;
     max-height: -moz-fit-content;
     max-height: fit-content;
-    overflow: visible; } }
+    overflow: visible; }
+  .brands-button {
+    padding-bottom: 24px; } }
 
 @media (min-width: 1400px) {
   .brands-list {
+    padding: 24px 32px;
     grid-template-columns: repeat(4, 1fr); }
     .brands-list__item {
       max-width: 240px; }
+  .brands__title {
+    padding: 16px 32px; }
+  .brands-button {
+    padding-bottom: 16px 32px; }
   .desktop {
     display: flex !important; } }
 
@@ -747,6 +762,7 @@ body:has(dialog[open]) {
 
 .services__item {
   box-sizing: border-box;
+  background-color: #ffffff;
   width: 240px;
   height: 160px;
   padding: 16px;
@@ -763,6 +779,8 @@ body:has(dialog[open]) {
   width: 100%;
   height: 100%;
   transition: all 0.3s ease; }
+  .services-button:hover .services-button__go {
+    transform: translateX(5px); }
   .services-button__go {
     background-image: url(./static/go.svg);
     width: 40px;
@@ -773,10 +791,11 @@ body:has(dialog[open]) {
   .services-button__descr {
     font-weight: 500; }
 
-.services-button:hover .services-button__go {
-  transform: translateX(5px); }
-
 @media (min-width: 768px) {
+  .services__title {
+    box-sizing: border-box;
+    height: 56px;
+    padding: 24px; }
   .services__items {
     padding: 24px;
     height: 150px;
@@ -788,21 +807,25 @@ body:has(dialog[open]) {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px 24px;
     grid-auto-flow: dense; }
-  .services__items.open {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content; }
+    .services__items .open {
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content; }
   .services__item {
     width: 224px; }
-  .swiper-wrapper {
-    padding: 0;
-    padding-bottom: 24px; }
   .services__button {
-    display: inherit; } }
+    display: inherit; }
+  .services-btn {
+    padding: 0 24px 24px; } }
 
 @media (min-width: 1400px) {
+  .services__title {
+    padding: 16px 32px; }
   .services__items {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr);
+    padding: 24px  32px; }
+  .services-btn {
+    padding: 16px 32px; } }
 
 .price__title {
   min-height: 56px;
@@ -840,6 +863,7 @@ body:has(dialog[open]) {
   font-size: 14px; }
 
 .price__button-offer {
+  padding-bottom: 40px;
   transition: transform 0.3s ease; }
   .price__button-offer:hover {
     transform: scale(1.1); }
@@ -847,17 +871,13 @@ body:has(dialog[open]) {
     display: flex;
     text-align: start;
     align-items: center;
-    font-weight: 500;
-    padding-bottom: 40px; }
+    font-weight: 500; }
     .price__button-offer span:after {
       content: url(./static/more.svg);
       height: 24px; }
 
-.price__items {
-  padding: 16px; }
-
-.price__info {
-  padding: 16px; }
+.price-wrapper {
+  padding: 0 16px; }
 
 @media (max-width: 767px) {
   .price__item {
@@ -872,7 +892,7 @@ body:has(dialog[open]) {
     background: #ffffff;
     padding: 16px;
     box-sizing: border-box; }
-  .price__button {
+  .price____button {
     position: absolute;
     right: 16px;
     bottom: 16px; }
@@ -882,33 +902,41 @@ body:has(dialog[open]) {
 @media (min-width: 768px) {
   .price__title {
     height: 56px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    padding: 24px; }
   .price__captions {
     padding: 16px;
+    padding-left: 24px;
     display: grid;
     grid-template-columns: 50% 15% 15%;
-    color: #7e7e82;
-    padding-bottom: 16px; }
+    color: #7e7e82; }
   .price__items {
+    padding: 0;
+    box-sizing: border-box;
     background-color: #ffffff;
     border-radius: 10px;
-    display: inherit;
-    padding-bottom: 0px; }
+    display: inherit; }
   .price__item {
     display: grid !important;
     grid-template-columns: 50% 15% 15% 20%;
-    padding: 23px 16px;
+    padding: 24px;
     align-items: center;
     box-shadow: 0 17px 0 -16px #EAEAEA;
     box-sizing: border-box; }
+    .price__item:last-child {
+      box-shadow: none; }
   .price__description {
     max-width: 65%;
     padding-top: 24px;
-    padding-bottom: 16px; } }
+    padding-bottom: 16px; }
+  .price-wrapper {
+    padding: 0 24px; } }
 
 @media (min-width: 1120px) {
-  .price {
-    padding-left: 32px; } }
+  .price-wrapper {
+    padding: 0 32px; }
+  .price__title {
+    padding: 16px 32px; } }
 
 .footer {
   font-size: 14px;
