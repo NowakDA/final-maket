@@ -67,9 +67,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 16px 24px;
       grid-auto-flow: dense;
-      .open {
-        height: fit-content;
-      }
+      
     }
     &__item {
       width: 224px;
@@ -77,6 +75,9 @@
     &__button {
       display: inherit;
     }
+  }
+  .services__items.open {
+    height: fit-content;
   }
   .services-btn {
     padding: 0 24px 24px;
@@ -95,6 +96,6 @@
   }
   }
   .services-btn {
-    padding: 16px 32px;
+    padding:16px 32px;
   }
 }
