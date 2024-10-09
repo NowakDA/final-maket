@@ -98,16 +98,31 @@
       max-height: fit-content;
       overflow: visible;
   }
+
+  .brands-button{
+    padding-bottom: 24px;
+  }
   
   
 }
 
 @media (min-width: 1400px) {
   .brands-list {
+    padding: 24px 32px;
     grid-template-columns: repeat(4, 1fr);
     &__item {
       max-width: 240px;
     }
+  }
+
+  .brands{
+    &__title{
+      padding: 16px 32px;
+    }
+  }
+
+  .brands-button{
+    padding-bottom: 16px 32px;
   }
 
   .desktop {

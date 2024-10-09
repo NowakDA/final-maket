@@ -28,6 +28,9 @@
     font-size: 16px;
     font-weight: 500;
     padding: 16px 0;
+    &:hover {
+      color: $text-light;
+    }
   }
   .active {
     color: $text-light;
@@ -79,8 +82,11 @@
   flex-direction: row;
   &__item {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     padding-right: 7px;
+    &:hover{
+      color: $text-light;
+    }
   }
   .active {
     color: $text-light;

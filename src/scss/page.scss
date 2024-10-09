@@ -76,6 +76,9 @@
       border-radius: 6px;
       background-color: $white;
     }
+    &:hover {
+      opacity: 50%;      
+    }
   }
 }
 
@@ -204,5 +207,8 @@
     align-items: center;
     gap: 16px;
     font-weight: 500;
+  }
+  .btn-read-more{
+    padding: 0 32px;
   }
 }

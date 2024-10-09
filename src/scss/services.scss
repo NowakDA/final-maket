@@ -11,11 +11,12 @@
     max-height: 80px;
   }
 
-  &__items{
+  &__items {
     padding: 16px;
   }
   &__item {
     box-sizing: border-box;
+    background-color: $white;
     width: 240px;
     height: 160px;
     padding: 16px;
@@ -23,8 +24,9 @@
     border-radius: 5px;
     transition: box-shadow 0.3s ease;
     &:hover {
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);}
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
+  }
 }
 .services-button {
   display: flex;
@@ -33,8 +35,8 @@
   width: 100%;
   height: 100%;
   transition: all 0.3s ease;
-  &:hover {
-    
+  &:hover .services-button__go {
+    transform: translateX(5px);
   }
   &__go {
     background-image: url(../img/go.svg);
@@ -47,51 +49,52 @@
   &__descr {
     font-weight: 500;
   }
-
-  
-}
-
-.services-button:hover .services-button__go {
-  transform: translateX(5px);
 }
 
 @media (min-width: 768px) {
-
-  .services__items {
-    padding: 24px;
-    height: 150px;
-    overflow: hidden;
-    width: fit-content;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px 24px;
-    grid-auto-flow: dense;
+  .services{
+    &__title{
+      box-sizing: border-box;
+      height: 56px;
+      padding: 24px;
+    }
+    &__items {
+      padding: 24px;
+      height: 150px;
+      overflow: hidden;
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px 24px;
+      grid-auto-flow: dense;
+      .open {
+        height: fit-content;
+      }
+    }
+    &__item {
+      width: 224px;
+    }
+    &__button {
+      display: inherit;
+    }
   }
-
-  .services__items.open{
-    height: fit-content;
-    
-
-  }
-
-  .services__item {
-    width: 224px;
-  }
-
-  .swiper-wrapper {
-    padding: 0;
-    padding-bottom: 24px;
-  }
-
-  .services__button {
-    display: inherit;
+  .services-btn {
+    padding: 0 24px 24px;
   }
 }
 
 
 @media (min-width: 1400px) {
-  .services__items {
+  .services{
+    &__title{
+      padding: 16px 32px;
+    }
+    &__items {
     grid-template-columns: repeat(4, 1fr);
+    padding: 24px  32px;
   }
-
+  }
+  .services-btn {
+    padding: 16px 32px;
+  }
 }

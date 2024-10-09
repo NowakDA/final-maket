@@ -41,6 +41,7 @@
   }
 
   &__button-offer {
+    padding-bottom: 40px;
     transition: transform 0.3s ease;
     &:hover {
       transform: scale(1.1);
@@ -50,26 +51,24 @@
       text-align: start;
       align-items: center;
       font-weight: 500;
-      padding-bottom: 40px;
       &:after {
         content: url(../img/more.svg);
         height: 24px;
       }
     }
-  }
-  &__items {
-    padding: 16px;
-  }
+  } 
 
-  &__info {
-    padding: 16px;
-  }
+}
+.price-wrapper{
+  padding: 0 16px;
 }
 
 
 
+
 @media (max-width: 767px) {
-  .price__item {
+.price{
+    &__item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,55 +81,74 @@
     padding: 16px;
     box-sizing: border-box;
   }
-
-  .price__button {
+  &____button {
     position: absolute;
     right: 16px;
     bottom: 16px;
   }
 
-  .price__button-offer {
+  &__button-offer {
     padding-top: 16px;
   }
+
 }
+}
+
 
 @media (min-width: 768px) {
   .price {
     &__title {
       height: 56px;
       box-sizing: border-box;
+      padding: 24px;
     }
     &__captions {
       padding: 16px;
+      padding-left: 24px;
       display: grid;
       grid-template-columns: 50% 15% 15%;
       color: $text-light;
-      padding-bottom: 16px;
     }
     &__items {
+      padding: 0;
+      box-sizing: border-box;
       background-color: $white;
       border-radius: 10px;
       display: inherit;
-      padding-bottom: 0px;
+      
+      
     }
     &__item {
       display: grid !important;
       grid-template-columns: 50% 15% 15% 20%;
-      padding: 23px 16px;
+      padding: 24px;
       align-items: center;
       box-shadow: 0 17px 0 -16px $btn-border;
       box-sizing: border-box;
+      &:last-child{
+        box-shadow:none;  
+      }
     }
     &__description {
       max-width: 65%;
       padding-top: 24px;
       padding-bottom: 16px;
     }
+    
+  }
+
+  .price-wrapper{
+    padding: 0 24px;
   }
 }
 
 @media (min-width: 1120px) {
-  .price {
-    padding-left: 32px;
+  .price-wrapper{
+    padding: 0 32px;
   }
+
+  .price__title{
+    padding: 16px 32px;
+  }
+
 }
