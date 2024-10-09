@@ -742,7 +742,7 @@ body:has(dialog[open]) {
   .brands__title {
     padding: 16px 32px; }
   .brands-button {
-    padding-bottom: 16px 32px; }
+    padding: 16px 32px; }
   .desktop {
     display: flex !important; } }
 
@@ -807,14 +807,14 @@ body:has(dialog[open]) {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px 24px;
     grid-auto-flow: dense; }
-    .services__items .open {
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content; }
   .services__item {
     width: 224px; }
   .services__button {
     display: inherit; }
+  .services__items.open {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content; }
   .services-btn {
     padding: 0 24px 24px; } }
 
