@@ -863,10 +863,7 @@ body:has(dialog[open]) {
   font-size: 14px; }
 
 .price__button-offer {
-  padding-bottom: 40px;
-  transition: transform 0.3s ease; }
-  .price__button-offer:hover {
-    transform: scale(1.1); }
+  padding-bottom: 40px; }
   .price__button-offer span {
     display: flex;
     text-align: start;
